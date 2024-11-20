@@ -80,18 +80,28 @@ students = student_data.students
 #         print(f"Updated student: {student}")
 
 
+
+
+
+
+
+
+
+
+
+
 # Update a specific entry by index
-students[0]['FName'] = 'Beverley'  # Updates the first student's first name
-students[3]['LName'] = 'Moreno'
-print(students[0])
+# students[0]['FName'] = 'Beverley'  # Updates the first student's first name
+# students[3]['LName'] = 'Moreno'
+# print(students[0])
 
-# Remove a specific student by index
-del students[-1]  # Removes the first student in the list
+# # Remove a specific student by index
+# del students[-1]  # Removes the first student in the list
 
-# Example: Add a 'ContactNumber' field to each student
-for student in students:
-    if student["CPSID"] == 10000022:
-        student['ContactNumber'] = '778-988-0987'  # Assign a default or specific value
+# # Example: Add a 'ContactNumber' field to each student
+# for student in students:
+#     if student["CPSID"] == 10000022:
+#         student['ContactNumber'] = '778-988-0987'  # Assign a default or specific value
 
 
 
@@ -148,8 +158,11 @@ print("New student added:")
 print(new_student)
 
 
+# simply adds contact number to each index in dictionary
+for student in students:
+    student['ContactNumber'] = 'N/A' 
 
-
+print(students)
 
 
 
@@ -166,3 +179,10 @@ with open('student_data.py', 'w') as f:
     f.write("]\n")
 
 print("student_data.py has been updated with the original formatting.")
+
+       
+
+
+
+
+
